@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSSN OAUSTECH | Account</title>
+        <link rel="shortcut icon" href="assets/images/mssn-logo.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="account">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">
+              <img src="assets/images/mssn-logo.jpg" alt="MSSN logo" />
+            </span>
+            <span class="brand-text">MSSN OAUSTECH</span>
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="quran.html">Quran</a>
+            <a href="qibla.html">Qibla</a>
+            <a href="athan.html">Athan</a>
+            <a href="azkar.html">Azkar</a>
+            <a href="hijrah.html">Hijrah Calendar</a>
+            <a href="account.html" class="active">Account</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="theme-sun">☀️</span>
+              <span class="theme-moon">🌙</span>
+            </button>
+            <button class="btn btn-primary btn-sm" id="logoutBtn" type="button">Logout</button>
+            <button class="nav-toggle" aria-label="Open menu" type="button">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <div class="mobile-nav" aria-label="Mobile menu">
+          <a href="index.html">Home</a>
+          <a href="quran.html">Quran</a>
+          <a href="qibla.html">Qibla</a>
+          <a href="athan.html">Athan</a>
+          <a href="azkar.html">Azkar</a>
+          <a href="hijrah.html">Hijrah Calendar</a>
+          <a href="account.html">Account</a>
+          <div class="mobile-nav-controls">
+            <button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="mobile-theme-label"><span class="mobile-theme-icon"><span class="theme-sun">☀️</span><span class="theme-moon">🌙</span></span>Theme</span>
+              <span class="mobile-theme-state">Light / Dark</span>
+            </button>
+            <button class="mobile-auth-link mobile-logout-btn" type="button">Logout <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </header>
+
+      <main class="container section account-page">
+        <section class="page-intro">
+          <div>
+            <span class="eyebrow">Profile</span>
+            <h1 id="accountUserName">User</h1>
+          </div>
+        </section>
+
+        <div class="account-grid">
+          <div class="card profile-card">
+            <div class="profile-header">
+              <div class="avatar">👤</div>
+              <div>
+                <h3 id="accountName">--</h3>
+                <p id="accountEmail">--</p>
+              </div>
+            </div>
+            <div class="account-actions">
+              <button type="button" class="btn btn-secondary" id="editProfileBtn">Edit Profile</button>
+              <button type="button" class="btn btn-secondary">Settings</button>
+              <button type="button" class="btn btn-primary" id="logoutBtnAlt">Logout</button>
+            </div>
+
+            <div class="profile-editor hidden" id="profileEditor">
+              <form id="profileForm" class="profile-form" novalidate>
+                <div class="field-group">
+                  <label for="editProfileName">Full Name</label>
+                  <input id="editProfileName" name="fullName" type="text" placeholder="Your full name" required />
+                </div>
+
+                <div class="field-group">
+                  <label for="editProfileEmail">Email</label>
+                  <input id="editProfileEmail" name="email" type="email" placeholder="your@email.com" required />
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary" id="saveProfileBtn">Save Changes</button>
+                  <button type="button" class="btn btn-secondary" id="cancelProfileEdit">Cancel</button>
+                </div>
+
+                <div id="profileFormMessage" class="auth-message" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card account-summary">
+            <h3>Account information</h3>
+            <ul class="simple-list">
+              <li><strong>Email:</strong> <span id="accountInfoEmail">--</span></li>
+              <li><strong>Member since:</strong> <span id="accountMemberSince">--</span></li>
+              <li><strong>Theme:</strong> <span id="accountTheme">--</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="account-panels">
+          <div class="card panel-box">
+            <h3>Quran bookmarks</h3>
+            <div id="accountBookmarks" class="list-box">No bookmarks yet.</div>
+          </div>
+          <div class="card panel-box">
+            <h3>Reading progress</h3>
+            <div id="accountReadingProgress" class="list-box">No reading history yet.</div>
+          </div>
+          <div class="card panel-box">
+            <h3>Azkar progress</h3>
+            <div id="accountAzkarProgress" class="list-box">No azkar progress yet.</div>
+          </div>
+          <div class="card panel-box">
+            <h3>Prayer settings</h3>
+            <div id="accountPrayerSettings" class="list-box">No settings saved.</div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <p>© <span id="yearValue"></span> MSSN OAUSTECH. All rights reserved.</p>
+          <p><a href="https://salimonusmanportfolio.netlify.app" target="_blank" rel="noopener noreferrer">Developed by Web Weaver</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/account.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E6D4A"/>
+      <stop offset="100%" stop-color="#123B2D"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="124" fill="#F4F0E7"/>
+  <circle cx="128" cy="128" r="108" fill="url(#shield)"/>
+  <path d="M128 24L146 42H176L161 62L180 94L147 97L128 120L109 97L76 94L95 62L80 42H110L128 24Z" fill="#F5F2EA" fill-opacity="0.8"/>
+  <path d="M60 66C95 82 109 94 127 129C145 94 159 82 196 66V164C167 180 151 185 128 211C105 185 89 180 60 164V66Z" fill="#F5F2EA" fill-opacity="0.12" stroke="#F0E7D0" stroke-width="4"/>
+  <circle cx="128" cy="126" r="30" fill="#F4F0E7"/>
+  <path d="M128 96L136.5 118.5H159L140.5 131.5L147.5 154L128 141.5L108.5 154L115.5 131.5L97 118.5H119.5L128 96Z" fill="#1E6D4A"/>
+  <path d="M70 157C92 169 106 175 128 196C150 175 164 169 186 157" stroke="#F3D89A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M82 82L128 150L174 82" stroke="#F3D89A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="128" y="187" text-anchor="middle" font-size="18" font-family="Georgia, serif" letter-spacing="2" fill="#F4F0E7">MSSN</text>
+</svg>

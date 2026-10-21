@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSSN OAUSTECH | Quran</title>
+        <link rel="shortcut icon" href="assets/images/mssn-logo.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="quran">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">
+              <img src="assets/images/mssn-logo.jpg" alt="MSSN logo" />
+            </span>
+            <span class="brand-text">MSSN OAUSTECH</span>
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="quran.html" class="active">Quran</a>
+            <a href="qibla.html">Qibla</a>
+            <a href="athan.html">Athan</a>
+            <a href="azkar.html">Azkar</a>
+            <a href="hijrah.html">Hijrah Calendar</a>
+            <a href="account.html">Account</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="theme-sun">☀️</span>
+              <span class="theme-moon">🌙</span>
+            </button>
+            <a class="btn btn-primary btn-sm" href="login.html">Login</a>
+            <button class="nav-toggle" aria-label="Open menu" type="button">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <div class="mobile-nav" aria-label="Mobile menu">
+          <a href="index.html">Home</a>
+          <a href="quran.html">Quran</a>
+          <a href="qibla.html">Qibla</a>
+          <a href="athan.html">Athan</a>
+          <a href="azkar.html">Azkar</a>
+          <a href="hijrah.html">Hijrah Calendar</a>
+          <a href="account.html">Account</a>
+          <div class="mobile-nav-controls">
+            <button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="mobile-theme-label"><span class="mobile-theme-icon"><span class="theme-sun">☀️</span><span class="theme-moon">🌙</span></span>Theme</span>
+              <span class="mobile-theme-state">Light / Dark</span>
+            </button>
+            <a class="mobile-auth-link" href="login.html">Login <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </header>
+
+      <main class="container section quran-page">
+        <section class="page-intro">
+          <div>
+            <span class="eyebrow">Sacred Text</span>
+            <h1>Quran Reader</h1>
+          </div>
+        </section>
+
+        <div class="toolbar card">
+          <div class="toolbar-row">
+            <input id="surahSearch" type="search" placeholder="Search Surah" />
+            <input id="verseSearch" type="search" placeholder="Search within surah" />
+            <div class="font-controls">
+              <button type="button" class="font-btn" data-size="decrease">A-</button>
+              <button type="button" class="font-btn" data-size="increase">A+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quran-layout">
+          <aside class="card surah-list-panel">
+            <div class="panel-header">
+              <h3>Surahs</h3>
+            </div>
+            <div id="surahList" class="surah-list"></div>
+          </aside>
+          <section class="card quran-reader-panel">
+            <div id="surahStatus" class="status-box">Loading Quran...</div>
+            <div id="surahReader" class="surah-reader"></div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <p>© <span id="yearValue"></span> MSSN OAUSTECH. All rights reserved.</p>
+          <p><a href="https://salimonusmanportfolio.netlify.app" target="_blank" rel="noopener noreferrer">Developed by Web Weaver</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/quran.js"></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSSN OAUSTECH</title>
+    <link rel="shortcut icon" href="assets/images/mssn-logo.jpg" type="image/x-icon">
+    <meta name="google-site-verification" content="9DlDe0NsYzDpq05_suJhWi7WLeyrMAFkein4nrioVng" />
+    <meta
+      name="description"
+      content="A modern Islamic platform for Quran reading, prayer times, Qibla, dhikr, and Hijri calendar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwUEQp1/6S7n2aM5l0mA3k0G1QwM2v5lXXC4T1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="brand" href="index.html" aria-label="Home page">
+            <span class="brand-mark">
+              <img src="assets/images/mssn-logo.jpg" alt="MSSN logo" />
+            </span>
+            <span class="brand-text">MSSN OAUSTECH</span>
+          </a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="quran.html">Quran</a>
+            <a href="qibla.html">Qibla</a>
+            <a href="athan.html">Athan</a>
+            <a href="azkar.html">Azkar</a>
+            <a href="hijrah.html">Hijrah Calendar</a>
+            <a href="account.html">Account</a>
+          </nav>
+          <div class="nav-actions">
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="theme-sun">☀️</span>
+              <span class="theme-moon">🌙</span>
+            </button>
+            <a class="btn btn-primary btn-sm" href="login.html">Login</a>
+            <button class="nav-toggle" aria-label="Open menu" type="button">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+        <div class="mobile-nav" aria-label="Mobile menu">
+          <a href="index.html">Home</a>
+          <a href="quran.html">Quran</a>
+          <a href="qibla.html">Qibla</a>
+          <a href="athan.html">Athan</a>
+          <a href="azkar.html">Azkar</a>
+          <a href="hijrah.html">Hijrah Calendar</a>
+          <a href="account.html">Account</a>
+          <div class="mobile-nav-controls">
+            <button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="mobile-theme-label"><span class="mobile-theme-icon"><span class="theme-sun">☀️</span><span class="theme-moon">🌙</span></span>Theme</span>
+              <span class="mobile-theme-state">Light / Dark</span>
+            </button>
+            <a class="mobile-auth-link" href="login.html">Login <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero pattern-bg">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">Peaceful guidance for everyday life</span>
+              <h1>Grow in faith with prayer, reflection, and clarity.</h1>
+              <p>
+                A beautiful platform to read the Quran, find direction, follow prayer times,
+                build daily dhikr, and stay connected with the Hijri calendar.
+              </p>
+              <div class="cta-group">
+                <a href="dashboard.html" class="btn btn-primary">Open Dashboard</a>
+                <a href="quran.html" class="btn btn-secondary">Read Quran</a>
+              </div>
+              <div class="hero-metrics">
+                <div>
+                  <strong>114</strong>
+                  <span>Surahs</span>
+                </div>
+                <div>
+                  <strong>5</strong>
+                  <span>Daily Prayers</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>Guidance</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero-card card glass-card">
+              <div class="card-head">
+                <span class="mini-pill">Today</span>
+                <span class="date-chip" id="homeDateChip">Loading...</span>
+              </div>
+              <div class="featured-prayer">
+                <p>Next Prayer</p>
+                <h3 id="heroNextPrayer">Maghrib</h3>
+                <span id="heroNextCountdown">--:--:--</span>
+              </div>
+              <div class="mini-list">
+                <div><span>Fajr</span><strong id="homeFajr">--:--</strong></div>
+                <div><span>Dhuhr</span><strong id="homeDhuhr">--:--</strong></div>
+                <div><span>Asr</span><strong id="homeAsr">--:--</strong></div>
+                <div><span>Maghrib</span><strong id="homeMaghrib">--:--</strong></div>
+                <div><span>Isha</span><strong id="homeIsha">--:--</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features section">
+          <div class="container">
+            <div class="section-heading">
+              <span class="eyebrow">Your daily spiritual toolkit</span>
+              <h2>Everything you need in one place</h2>
+            </div>
+            <div class="feature-grid">
+              <article class="feature-card card">
+                <div class="feature-icon"><img src="assets/images/Quran.jpeg" alt="quran"></div>
+                <!-- <i class="fa-solid fa-book-quran"></i> -->
+                <h3>Quran</h3>
+                <p>Read and reflect on the words of Allah.</p>
+                <a href="quran.html" class="btn btn-link">Open</a>
+              </article>
+              <article class="feature-card card">
+                <div class="feature-icon"> <img src="assets/images/Qibla.jpeg" alt="qibla"></div>
+                <h3>Qibla</h3>
+                <p>Find the direction of the Kaaba.</p>
+                <a href="qibla.html" class="btn btn-link">Open</a>
+              </article>
+              <article class="feature-card card">
+                <div class="feature-icon"> <img src="assets/images/Athan.jpeg" alt="athan" style="border-radius: 20px; height: 70px; width: 100px;"></div>
+                <h3>Athan</h3>
+                <p>Never miss your prayer times.</p>
+                <a href="athan.html" class="btn btn-link">Open</a>
+              </article>
+              <article class="feature-card card">
+                <div class="feature-icon"><img src="assets/images/Azkhar.jpeg" alt="Azkhar" style="border-radius: 20px; height: 70px; width: 100px;"></div>
+                <h3>Azkar</h3>
+                <p>Remember Allah throughout your day.</p>
+                <a href="azkar.html" class="btn btn-link">Open</a>
+              </article>
+              <article class="feature-card card">
+                <div class="feature-icon"><img src="assets/images/Calendar.jpeg" alt="calendar" style="border-radius: 20px; height: 70px; width: 100px;"></div>
+                <h3>Hijrah Calendar</h3>
+                <p>Keep track of important Islamic dates.</p>
+                <a href="hijrah.html" class="btn btn-link">Open</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section trusted-panel">
+          <div class="container two-col">
+            <div class="mini-card card pattern-bg-soft">
+              <span class="eyebrow">Daily supplication</span>
+              <h3>“Indeed, with hardship comes ease.”</h3>
+              <p>— Quran, 94:5</p>
+            </div>
+            <div class="mini-card card">
+              <span class="eyebrow">Why this platform</span>
+              <ul class="simple-list">
+                <li>Responsive across phones, tablets, and desktop</li>
+                <li>Real Qibla and prayer-time calculations</li>
+                <li>Simple, elegant, distraction-free design</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <p>© <span id="yearValue"></span> MSSN OAUSTECH. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Create account</a>
+            <a href="https://salimonusmanportfolio.netlify.app" target="_blank" rel="noopener noreferrer">Developed by Web Weaver</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/athan.js"></script>
+  </body>
+</html>
